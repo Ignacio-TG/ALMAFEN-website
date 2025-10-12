@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Grupo de Investigación — Página Oficial</title>
+  <meta name="description" content="Research group: who we are, publications and MSc/PhD applications." />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Tailwind via CDN -->
+  <script>
+    // Configuración de Tailwind — debe declararse antes de cargar el CDN
+    window.tailwind = window.tailwind || {};
+    window.tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {50:'#f5f8ff',100:'#eaefff',200:'#cfdcff',300:'#a6bdff',400:'#7a95ff',500:'#4f6cff',600:'#2f48e6',700:'#2438b4',800:'#1c2b87',900:'#141e5c'}
+          }
+        }
+      }
+    };
+  </script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- React 18 desde ESM (modulos) -->
+  <script type="module">
+    // Precarga para mejorar TTFB de módulos externos
+    import 'https://esm.sh/react@18.3.1';
+    import 'https://esm.sh/react-dom@18.3.1/client';
+  </script>
+  <!-- App -->
+  <script type="module" src="app.js"></script>
+</head>
+<body class="bg-gray-50">
+  <div id="root"></div>
+</body>
+</html>
