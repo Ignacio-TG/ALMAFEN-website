@@ -20,7 +20,15 @@ export function Nav({ current, onChange, labName }) {
           'div',
           { className: 'flex items-center gap-3', key: 'left' },
           [
-            React.createElement('div', { className: 'h-10 w-10 rounded-xl bg-white/20 backdrop-blur border border-white/30 shadow-lg flex items-center justify-center', key: 'logo' }),
+              React.createElement(
+                'img',
+                {
+                  src: 'img/logo.png',
+                  alt: 'Logo',
+                  className: 'h-10 w-10 rounded-xl bg-white/20 backdrop-blur border border-white/30 shadow-lg object-contain',
+                  key: 'logo'
+                }
+              ),
             React.createElement('span', { className: 'font-bold text-white text-lg tracking-tight', key: 'name' }, labName)
           ]
         ),
